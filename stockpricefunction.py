@@ -32,7 +32,7 @@ def send_mail(out_stock_flag):
     server.ehlo() # establishes a connection
     server.starttls() # starts our encryption
     server.ehlo()
-
+    
     server.login('richard23496@gmail.com', 'fhjwlddkipfkfosb')
     subject ='Important email!'
 
