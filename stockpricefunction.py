@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 from re import sub
 from decimal import Decimal
 
+# testing git
+
 URL = input("Please give me the link of the card you are after: ")
 test_value = input("How much are you willing to pay? ")
 recipient = input("Please give me the email address you want to be notified: ")
