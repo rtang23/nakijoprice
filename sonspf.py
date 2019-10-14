@@ -12,6 +12,8 @@ URL = 'https://www.nakijo.com.au/collections/mega-tin-2019-mp19/products/borrels
 #URL = input("Please give me the link of the card you are after: ")
 test_value = input("Please tell me the price you want to check for: ")
 
+page = requests.get(URL)
+soup = BeautifulSoup(page.content, 'html.parser')
 count = 0
 
 def check_stock():
@@ -30,8 +32,6 @@ def check_stock():
 def check_price(stock):
     global count
     global value
-    page = requests.get(URL)
-    soup = BeautifulSoup(page.content, 'html.parser')
        
     price = soup.find_all('span', class_='money')[0].get_text()
     print(price)
