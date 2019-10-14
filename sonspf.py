@@ -34,6 +34,7 @@ def check_price(stock):
     soup = BeautifulSoup(page.content, 'html.parser')
        
     price = soup.find_all('span', class_='money')[0].get_text()
+    print(price)
 
     value = Decimal(sub(r'[^\d.]', '', price))
     #print(value)
@@ -42,7 +43,7 @@ def check_price(stock):
     print('{} at {}'.format(stock,price))
 
     if (user_value >= value) and (count is 0):
-        send_mail()
+        #send_mail()
         print('Checkpoint: 1')
         count = 1
     else:
